@@ -15,6 +15,14 @@
         Web Developer
       </p>
     </div>
+    <div class="social-icons">
+      <a href="https://github.com/carlarte" target="_blank" rel="noopener noreferrer">
+        <img src="@/assets/github.png" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/carlacayerohernandez" target="_blank" rel="noopener noreferrer">
+        <img src="@/assets/linkedin.png" alt="LinkedIn" />
+      </a>
+    </div>
   </section>
 
 </template>
@@ -45,7 +53,7 @@ export default {
         delay: 0
       },
       delay: (_, i) => i * 50,
-      ease: 'inOutCirc', // global fallback
+      ease: 'inOutCirc',
       loop: true,
       loopDelay: 1000
     });
@@ -75,18 +83,35 @@ export default {
   opacity: 1;
 }
 
-/* Media query para pantallas grandes */
-@media (min-width: 1300px) {
-  .animated-name {
-    font-size: 155px;
-    /* Tamaño más grande para pantallas de ordenador */
-  }
-}
 .frase{
   color: white;
 }
 section {
   display: flex;
   flex-direction: column;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.social-icons img {
+  width: 50px; 
+  height: 50px;
+  object-fit: contain; 
+  transition: transform 0.3s ease; 
+}
+
+.social-icons img:hover {
+  transform: scale(1.6); 
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1300px) {
+  .animated-name {
+    font-size: 155px;
+    /* Tamaño más grande para pantallas de ordenador */
+  }
 }
 </style>
