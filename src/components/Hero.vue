@@ -67,7 +67,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #161616, #161616);
+  background: #161616;
   text-align: center;
 }
 
@@ -84,7 +84,7 @@ export default {
 }
 
 .frase{
-  color: white;
+  color: #ffffff;
 }
 section {
   display: flex;
