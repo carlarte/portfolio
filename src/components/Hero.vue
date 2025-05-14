@@ -1,14 +1,22 @@
 <template>
   <section class="hero">
-    <h2 class="animated-name">
-      <span 
-        v-for="(char, index) in nameArray" 
-        :key="index" 
-        class="letter">
-        {{ char === ' ' ? '\u00A0' : char }}
-      </span>
-    </h2>
+    <div>
+      <h2 class="animated-name">
+        <span v-for="(char, index) in nameArray" :key="index" class="letter">
+          {{ char === ' ' ? '\u00A0' : char }}
+        </span>
+      </h2>
+    </div>
+    <div>
+      <h2 class="frase">
+        Escribo código, creo experiencias.
+      </h2>
+      <p class="frase">
+        Web Developer
+      </p>
+    </div>
   </section>
+
 </template>
 
 <script>
@@ -66,10 +74,19 @@ export default {
   display: inline-block;
   opacity: 1;
 }
+
 /* Media query para pantallas grandes */
-@media (min-width: 1024px) {
+@media (min-width: 1300px) {
   .animated-name {
-    font-size: 155px; /* Tamaño más grande para pantallas de ordenador */
+    font-size: 155px;
+    /* Tamaño más grande para pantallas de ordenador */
   }
+}
+.frase{
+  color: white;
+}
+section {
+  display: flex;
+  flex-direction: column;
 }
 </style>
