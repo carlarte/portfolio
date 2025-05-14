@@ -2,7 +2,7 @@
     <div class="menu-container">
         <!-- Botones -->
         <div v-if="!showContent" class="menu-buttons">
-            <button @click="selectView('CV')">CV</button>
+            <button @click="selectView('CV')">Experiencia</button>
             <button @click="selectView('Technologies')">Tecnologías</button>
             <button @click="selectView('Projects')">Proyectos</button>
         </div>
