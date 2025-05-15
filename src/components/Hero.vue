@@ -17,10 +17,10 @@
     </div>
     <div class="social-icons">
       <a href="https://github.com/carlarte" target="_blank" rel="noopener noreferrer">
-        <img src="@/assets/github.png" alt="GitHub" />
+        <img src="@/assets/Hero/github.png" alt="GitHub" />
       </a>
       <a href="https://linkedin.com/in/carlacayerohernandez" target="_blank" rel="noopener noreferrer">
-        <img src="@/assets/linkedin.png" alt="LinkedIn" />
+        <img src="@/assets/Hero/linkedin.png" alt="LinkedIn" />
       </a>
     </div>
   </section>

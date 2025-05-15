@@ -51,7 +51,7 @@ export default {
   align-items: flex-start;
   padding: 20px;
   color: #ffffff;
-  gap: 40px;
+  gap: 20px;
   position: relative;
 }
 
