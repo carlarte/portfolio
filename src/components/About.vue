@@ -2,12 +2,12 @@
   <section class="about-container">
     <!-- Parte izquierda: Componente Menu -->
     <div class="about-left">
-      <Menu />
+      <Menu @update-background="background = $event" />
     </div>
 
     <!-- Parte derecha: Imagen -->
     <div class="about-right">
-      <Image />
+      <Imagen :image="background" />
     </div>
   </section>
 </template>
@@ -16,6 +16,11 @@
 import Image from './Image.vue'
 import Menu from './Menu.vue';
 export default {
+  data() {
+    return {
+      background: '',
+    };
+  },
   components: { Image, Menu },
   
 }

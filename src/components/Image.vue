@@ -1,34 +1,21 @@
 <template>
-    <div class="image-container">
-        <img src="@/assets/carlaa.png" alt="">
-    </div>
+  <div class="background-image" :style="{ backgroundImage: 'url(' + image + ')' }"></div>
 </template>
 
 <script>
 export default {
-
-}
+  props: {
+    image: String
+  }
+};
 </script>
 
-<style>
-.image-container {
-    width: 100%;
-    /* Ocupa todo el ancho del componente */
-    height: 100%;
-    /* Ocupa todo el alto del componente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* Evita que la imagen se salga del contenedor */
-}
-
-.image-container img {
-    max-width: 100%;
-    /* La imagen no excederá el ancho del contenedor */
-    max-height: 100%;
-    /* La imagen no excederá el alto del contenedor */
-    object-fit: contain;
-    /* Ajusta la imagen manteniendo su proporción */
+<style scoped>
+.background-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s ease-in-out;
 }
 </style>

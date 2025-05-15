@@ -66,7 +66,6 @@ export default {
 
 .tech-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #38e6ec;
 }
 
 .tech-icon {

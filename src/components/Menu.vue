@@ -8,9 +8,7 @@
     </div>
 
     <!-- Contenido dinámico -->
-    <div class="menu-content" v-if="showContent">
-      <component :is="currentComponent" />
-    </div>
+    <component :is="currentComponent" @update-background="handleUpdateBackground" />
   </div>
 </template>
 
@@ -40,6 +38,9 @@ export default {
       this.currentView = view;
       this.showContent = true;
     },
+    handleUpdateBackground(imageUrl) {
+    this.$emit('update-background', imageUrl);
+    }
   },
 };
 </script>
@@ -94,6 +95,7 @@ export default {
 .menu-buttons button:hover {
   box-shadow: 0 0 15px #FF5D5D, 0 0 30px #FF5D5D, 0 0 45px #FF5D5D;
 }
+
 .menu-buttons button:active {
   box-shadow: 0 0 15px #ffffff, 0 0 50px #FF5D5D, 0 0 70px #FF5D5D;
 }
