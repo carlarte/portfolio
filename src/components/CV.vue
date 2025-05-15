@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .scroll-container {
-  max-height: 700px;
+  max-height: 685px;
   width: 100%;
   max-width: 600px;
   overflow-y: auto;

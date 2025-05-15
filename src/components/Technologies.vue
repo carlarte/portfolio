@@ -19,20 +19,17 @@ export default {
         { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
         { name: 'Vue.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
-        { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg' },
+        { name: 'Laravel', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg' },
+        { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
         { name: 'Django', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
         { name: 'JSON', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg' },
         { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
         { name: 'Ubuntu / GNU Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg' },
         { name: 'OpenSUSE Tumbleweed', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/OpenSUSE_Logo.svg/1024px-OpenSUSE_Logo.svg.png' },
-        { name: 'Fish Shell', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fish_shell_logo.svg/512px-Fish_shell_logo.svg.png' },
-        { name: 'VirtualFish', icon: 'https://avatars.githubusercontent.com/u/27741878?s=200&v=4' }, // GitHub org icon
-        { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+        { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
         { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
         { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
         { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-        { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-        { name: 'Anime.js', icon: 'https://avatars.githubusercontent.com/u/26150955?s=200&v=4' } // animejs org avatar
       ]
     };
   }
@@ -41,19 +38,11 @@ export default {
 
 <style scoped>
 .technologies-container {
-  padding: 40px 20px;
+  padding: 65px 50px;
   background-color: #1e1e1e;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(56, 230, 236, 0.2);
-  max-width: 1000px;
+  max-width: 600px;
   margin: 0 auto;
-}
-
-.title {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #38e6ec;
 }
 
 .grid {
