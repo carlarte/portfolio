@@ -84,8 +84,8 @@ export default {
 
 /* Tamaño reducido cuando hay contenido */
 .menu-buttons.mini button {
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   font-size: 12px;
   box-shadow: 0 0 20px #38e6ec;
 }
