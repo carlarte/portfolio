@@ -11,7 +11,7 @@
       <h2 class="frase">
         Escribo código, creo experiencias.
       </h2>
-      <p class="frase">
+      <p class="frase1">
         Web Developer
       </p>
     </div>
@@ -86,6 +86,11 @@ export default {
 .frase{
   color: #ffffff;
 }
+.frase1{
+  color: #FF5D5D;
+  font-weight: bold;
+}
+
 section {
   display: flex;
   flex-direction: column;

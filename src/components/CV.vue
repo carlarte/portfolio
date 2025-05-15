@@ -2,13 +2,11 @@
   <div class="scroll-container">
     <div class="scroll-content">
       <div
-        v-for="(item, index) in timeline"
-        :key="index"
-        class="scroll-section"
-        ref="sections"
-      >
-        <h2 class="date">{{ item.date }}</h2>
-        <p class="description">{{ item.description }}</p>
+        v-for="(item, index) in timeline" :key="index" class="scroll-section" ref="sections">
+        <p class="date">{{ item.date }}</p>
+        <h2 class="centro">{{ item.centro }}</h2>
+        <h2 class="empresa">{{ item.empresa }}</h2>
+        <h2 class="description">{{ item.description }}</h2>
       </div>
     </div>
   </div>
@@ -21,19 +19,14 @@ export default {
   data() {
     return {
       timeline: [
-        { date: "2020", description: "Comencé mis estudios en Desarrollo Web." },
-        { date: "2021", description: "Realicé prácticas en Empresa XYZ." },
-        { date: "2022", description: "Trabajé como Desarrollador Frontend Junior." },
-        { date: "2023", description: "Me especialicé en Vue.js y tecnologías modernas." },
-        { date: "2020", description: "Comencé mis estudios en Desarrollo Web." },
-        { date: "2021", description: "Realicé prácticas en Empresa XYZ." },
-        { date: "2022", description: "Trabajé como Desarrollador Frontend Junior." },
-        { date: "2023", description: "Me especialicé en Vue.js y tecnologías modernas." },
-        { date: "2020", description: "Comencé mis estudios en Desarrollo Web." },
-        { date: "2021", description: "Realicé prácticas en Empresa XYZ." },
-        { date: "2022", description: "Trabajé como Desarrollador Frontend Junior." },
-        { date: "2023", description: "Me especialicé en Vue.js y tecnologías modernas." },
-      ],
+        { date: "2010 - 2012", centro: "INS Salvador Seguí", description: "Técnica en Curas Auxiliares de Enfermería" },
+        { date: "2013 - 2016", centro: "IES Eugeni d'Ors",description: "Técnica en Labratorio de Diagnóstico Clínico" },
+        { date: "2017 - 2022", empresa: "Hospital Municipal de Badalona (BSA)", description: "5 años de experiencia como Auxiliar de Enfermería" },
+        { date: "2019 - 2021", centro: "Universitat de Barcelona (UB)", description: "(81 créditos) Grado de Bellas Artes" },
+        { date: "Ene - Dic de 2023", centro: "Centre d'Estudis Politécnics", description: "Actividades de gestión administrativa (SOC)" },
+        { date: "2023 - 2025", centro: "Centre d'Estudis Politécnics de Barcelona (CEP)", description: "Técnica en Desarrollo de Aplicaciones Web" },
+        { date: "Feb - Jun de 2025", empresa: "M-Automoción", description: "Prácticas como desarrolladora Web" }
+      ]
     };
   },
   mounted() {
@@ -48,7 +41,7 @@ export default {
         easing: 'easeOutExpo',
         autoplay: onScroll({
           target: section,
-          threshold: 0.5 // el % del elemento visible para disparar animación
+          threshold: 0.5
         })
       });
     });
@@ -69,6 +62,9 @@ export default {
   padding: 10px;
   scrollbar-width: none; 
   -ms-overflow-style: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
 .scroll-content {
@@ -93,14 +89,26 @@ export default {
 }
 
 .date {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.centro{
+  font-size: 1.5rem;
   font-weight: bold;
   color: #38e6ec;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+.empresa{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FF5D5D;
+  margin-bottom: 5px;
 }
 
 .description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #ffffff;
 }
 </style>

@@ -75,10 +75,12 @@ export default {
 }
 
 .menu-buttons button:hover {
-  background-color: #2bc0c9;
-  box-shadow: 0 0 15px #2bc0c9, 0 0 30px #2bc0c9, 0 0 45px #2bc0c9;
-  color: #000000;
-  font-weight: bold;
+  box-shadow: 0 0 15px #FF5D5D, 0 0 30px #FF5D5D, 0 0 45px #FF5D5D;
+  /* font-weight: bold; */
+}
+.menu-buttons button:active {
+  box-shadow: 0 0 15px #ffffff, 0 0 50px #FF5D5D, 0 0 70px #FF5D5D;
+  /* font-weight: bold; */
 }
 
 .menu-content {
