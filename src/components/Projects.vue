@@ -1,16 +1,13 @@
 <template>
   <div class="projects-container">
     <div class="grid">
-      <div
-        class="project-card"
-        v-for="(project, index) in projects"
-        :key="index"
-        @click="selectProject(project)"
-      >
+      <div class="project-card" v-for="(project, index) in projects" :key="index" @click="selectProject(project)">
         <h3>{{ project.name }}</h3>
         <p>{{ project.description }}</p>
         <p>{{ project.tecnologia }}</p>
-        <a :href="project.repo" target="_blank" class="repo-link">Ver en GitHub</a>
+        <div class="github">
+          <a :href="project.repo" target="_blank" class="repo-link">Ver en GitHub</a>
+        </div>
       </div>
     </div>
   </div>
@@ -86,12 +83,15 @@ export default {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; 
 }
 
 .project-card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 20px #38e6ec;
 }
+
 .project-card:active {
   box-shadow: 0 0 15px #ffffff, 0 0 50px #38e6ec, 0 0 70px #38e6ec;
 }
@@ -101,6 +101,7 @@ export default {
   color: #38e6ec;
   margin-bottom: 10px;
   font-weight: bold;
+  
 }
 
 .project-card p {
@@ -117,5 +118,11 @@ export default {
 
 .repo-link:hover {
   text-decoration: underline;
+}
+.github {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  margin-top: auto;
 }
 </style>
