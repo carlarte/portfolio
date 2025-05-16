@@ -17,6 +17,10 @@
 </template>
 
 <script>
+import role from '@/assets/projects/role.png';
+import puzzleImg from '@/assets/projects/puzzle.png';
+import chillgigImg from '@/assets/projects/chillgig.png';
+import gggamersImg from '@/assets/projects/gggamers.png';
 export default {
   data() {
     return {
@@ -26,35 +30,34 @@ export default {
           description: 'Juego de piezas deslizantes',
           tecnologia: 'HTML, CSS, JavaScript',
           repo: 'https://github.com/cep-daw/3x3-puzzle',
-          image: '@/assets/projects/carlaa.png'
+          image: puzzleImg
         },
         {
           name: 'GGGamers',
           description: 'Aplicación web que gestiona eventos de torneos de videojuegos.',
           tecnologia: 'Vue.js y Laravel',
           repo: 'https://github.com/cep-daw/GGGamers',
-          image: '@/assets/projects/GGGamers.png'
+          image: gggamersImg
         },
         {
           name: 'Al-Khaf',
           description: 'Juego RPG de mazmorras.',
           tecnologia: 'HTML, CSS, Java',
           repo: 'https://github.com/cep-daw/role-game',
-          image: '@/assets/projects/carlaa.png'
+          image: role
         },
         {
           name: 'ChillGig',
           description: 'Aplicación web que comunica músicos y locales para eventos en directo.',
           tecnologia: 'Vue.js y Laravel',
           repo: 'https://github.com/TheCheetahGirls-3/melodia-conectada',
-          image: '@/assets/projects/chillgig.png'
+          image: chillgigImg
         }
       ]
     };
   },
   methods: {
     selectProject(project) {
-      // Emitimos al padre para que se lo pase a Imagen.vue
       this.$emit('update-background', project.image);
     }
   }

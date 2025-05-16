@@ -7,7 +7,7 @@
 
     <!-- Parte derecha: Imagen -->
     <div class="about-right">
-      <Imagen :image="background" />
+      <Image :image="background" />
     </div>
   </section>
 </template>
@@ -47,7 +47,9 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #747578;
+  background-color: #161616;
+  min-width: 300px;
+  min-height: 400px;
 }
 
 body {

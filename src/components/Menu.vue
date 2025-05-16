@@ -17,11 +17,20 @@ import CV from './CV.vue';
 import Technologies from './Technologies.vue';
 import Projects from './Projects.vue';
 
+import carla from '@/assets/projects/carla.png';
+import code from '@/assets/projects/code.jpg';
+import cohete from '@/assets/projects/cohete.png';
+
 export default {
   data() {
     return {
       currentView: null,
       showContent: false,
+      selectionImages: {
+        CV: carla,
+        Technologies: code,
+        Projects: cohete,
+      }
     };
   },
   computed: {
@@ -37,9 +46,10 @@ export default {
     selectView(view) {
       this.currentView = view;
       this.showContent = true;
+      this.$emit('update-background', this.selectionImages[view]);
     },
-    handleUpdateBackground(imageUrl) {
-    this.$emit('update-background', imageUrl);
+    handleUpdateBackground(image) {
+    this.$emit('update-background', image);
     }
   },
 };
