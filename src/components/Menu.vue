@@ -2,7 +2,7 @@
   <div class="menu-container">
     <!-- Botones siempre visibles y fijos -->
     <div :class="['menu-buttons', { 'mini': showContent }]">
-      <button @click="selectView('CV')">Experiencia</button>
+      <button @click="selectView('CV')">Experienciaaaaaaaaaaaaaaaaa</button>
       <button @click="selectView('Technologies')">Tecnologías</button>
       <button @click="selectView('Projects')">Proyectos</button>
     </div>
