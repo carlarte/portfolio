@@ -2,20 +2,41 @@
   <div class="projects-scroll-container" ref="scrollContainer">
     <div class="projects-scroll-content">
       <div class="grid">
-        <div
-          class="project-card"
-          v-for="(project, index) in projects"
-          :key="index"
-          @click="selectProject(project)"
-          ref="sections"
-        >
-          <h3>{{ project.name }}</h3>
-          <p>{{ project.description }}</p>
-          <p>{{ project.tecnologia }}</p>
-          <div class="github">
-            <a :href="project.repo" target="_blank" class="repo-link">Ver en GitHub</a>
+        <template v-for="(project, index) in projects" :key="index">
+          <a
+            v-if="project.link"
+            :href="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            <div
+              class="project-card hoverable"
+              @click="selectProject(project)"
+              ref="sections"
+            >
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.description }}</p>
+              <p>{{ project.tecnologia }}</p>
+              <div class="github">
+                <a :href="project.repo" target="_blank" class="repo-link" @click.stop>Ver en GitHub</a>
+              </div>
+            </div>
+          </a>
+          <div
+            v-else
+            class="project-card"
+            @click="selectProject(project)"
+            ref="sections"
+          >
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+            <p>{{ project.tecnologia }}</p>
+            <div class="github">
+              <a :href="project.repo" target="_blank" class="repo-link" @click.stop>Ver en GitHub</a>
+            </div>
           </div>
-        </div>
+        </template>
       </div>
     </div>
   </div>
@@ -43,7 +64,8 @@ export default {
           description: 'Aplicación web que gestiona eventos de torneos de videojuegos.',
           tecnologia: 'Vue.js y Laravel',
           repo: 'https://github.com/cep-daw/GGGamers',
-          image: gggamersImg
+          image: gggamersImg,
+          link: 'https://gggamers.carlacayero.me/'
         },
         {
           name: 'Al-Khaf',
@@ -91,6 +113,11 @@ export default {
 </script>
 
 <style scoped>
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 .projects-scroll-container {
   max-height: 685px;
   width: 100%;
@@ -138,7 +165,7 @@ export default {
   flex-direction: column; 
 }
 
-.project-card:hover {
+.project-card.hoverable:hover {
   transform: scale(1.03);
   box-shadow: 0 0 20px #38e6ec;
 }
