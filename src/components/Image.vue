@@ -20,8 +20,15 @@ export default {
 .background-image {
   width: 70%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   transition: background-image 0.6s ease-in-out;
+}
+@media (max-width: 1000px) {
+  .background-image {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

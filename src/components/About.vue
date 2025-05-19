@@ -56,4 +56,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+@media (max-width: 1000px) {
+  .about-right {
+    display: none;
+  }
+}
 </style>

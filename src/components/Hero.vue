@@ -113,7 +113,7 @@ section {
 }
 
 /* Media query para pantallas grandes */
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
   .animated-name {
     font-size: 155px;
     /* Tamaño más grande para pantallas de ordenador */

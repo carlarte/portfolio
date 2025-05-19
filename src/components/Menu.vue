@@ -113,4 +113,37 @@ export default {
 .menu-content {
   flex: 1;
 }
+@media (max-width: 600px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
+  }
+  .menu-buttons {
+    flex-direction: row;
+    gap: 10px;
+    position: static;
+    min-width: unset;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .menu-buttons button,
+  .menu-buttons.mini button {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+  }
+  .menu-content {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
 </style>

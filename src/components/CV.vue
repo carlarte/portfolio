@@ -2,7 +2,7 @@
   <div class="scroll-container" ref="scrollContainer">
     <div class="scroll-content">
       <div
-        v-for="(item, index) in timeline"
+        v-for="(item, index) in reversedTimeline"
         :key="index"
         class="scroll-section"
         ref="sections"
@@ -40,6 +40,11 @@ export default {
         { date: "Feb - Jun de 2025", empresa: "M-Automoción", url: "https://www.m-automocion.com/", description: "Prácticas como desarrolladora Web" , skill: "Configurar un servidor virgen, actualizar versiones de software, trabajar con entornos virtuales, creación de un whistleBlower y un acta de entrega con firma digital en móvil"}
       ]
     };
+  },
+  computed: {
+    reversedTimeline() {
+      return [...this.timeline].reverse();
+    }
   },
   mounted() {
     this.$nextTick(() => {

@@ -1,12 +1,20 @@
 <template>
-  <div class="projects-container">
-    <div class="grid">
-      <div class="project-card" v-for="(project, index) in projects" :key="index" @click="selectProject(project)">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-        <p>{{ project.tecnologia }}</p>
-        <div class="github">
-          <a :href="project.repo" target="_blank" class="repo-link">Ver en GitHub</a>
+  <div class="projects-scroll-container" ref="scrollContainer">
+    <div class="projects-scroll-content">
+      <div class="grid">
+        <div
+          class="project-card"
+          v-for="(project, index) in projects"
+          :key="index"
+          @click="selectProject(project)"
+          ref="sections"
+        >
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <p>{{ project.tecnologia }}</p>
+          <div class="github">
+            <a :href="project.repo" target="_blank" class="repo-link">Ver en GitHub</a>
+          </div>
         </div>
       </div>
     </div>
@@ -14,6 +22,7 @@
 </template>
 
 <script>
+import { animate, onScroll } from 'animejs';
 import role from '@/assets/projects/role.png';
 import puzzleImg from '@/assets/projects/puzzle.png';
 import chillgigImg from '@/assets/projects/chillgig.png';
@@ -57,18 +66,57 @@ export default {
     selectProject(project) {
       this.$emit('update-background', project.image);
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const sections = this.$refs.sections;
+      const container = this.$refs.scrollContainer;
+      const sectionArray = Array.isArray(sections) ? sections : [sections];
+      sectionArray.forEach(section => {
+        animate(section, {
+          opacity: [0, 1],
+          translateY: [50, 0],
+          duration: 1000,
+          easing: 'easeOutExpo',
+          autoplay: onScroll({
+            target: section,
+            container: container,
+            threshold: 0.5
+          })
+        });
+      });
+    });
   }
 };
 </script>
 
 <style scoped>
-.projects-container {
-  padding: 55px 40px;
-  background-color: #1e1e1e;
-  border-radius: 12px;
+.projects-scroll-container {
+  max-height: 685px;
+  width: 100%;
   max-width: 600px;
+  overflow-y: auto;
   margin: 0 auto;
+  background-color: #161616;
   color: white;
+  border-radius: 10px;
+  padding: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.projects-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-scroll-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
 }
 
 .grid {
@@ -77,12 +125,15 @@ export default {
   gap: 30px;
 }
 
+/* ...resto de tus estilos existentes para .project-card, .repo-link, etc... */
 .project-card {
   background-color: #2c2c2c;
   padding: 33.6px;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-direction: column; 
 }
@@ -101,7 +152,6 @@ export default {
   color: #38e6ec;
   margin-bottom: 10px;
   font-weight: bold;
-  
 }
 
 .project-card p {
