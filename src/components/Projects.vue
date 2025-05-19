@@ -151,8 +151,6 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
 }
-
-/* ...resto de tus estilos existentes para .project-card, .repo-link, etc... */
 .project-card {
   background-color: #2c2c2c;
   padding: 33.6px;

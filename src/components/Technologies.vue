@@ -44,7 +44,7 @@ export default {
         },
         {
           name: 'Django',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg'
+          icon: 'https://static.djangoproject.com/img/logos/django-logo-negative.svg'
         },
         {
           name: 'JSON',
