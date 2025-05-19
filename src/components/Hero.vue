@@ -22,6 +22,9 @@
       <a href="https://linkedin.com/in/carlacayerohernandez" target="_blank" rel="noopener noreferrer">
         <img src="@/assets/Hero/linkedin.png" alt="LinkedIn" />
       </a>
+      <a href="mailto:ccaarlaa@gmail.com" target="_blank" rel="noopener noreferrer">
+        <img src="@/assets/Hero/gmail.png" alt="Gmail" />
+      </a>
     </div>
   </section>
 
@@ -112,11 +115,10 @@ section {
   transform: scale(1.6); 
 }
 
-/* Media query para pantallas grandes */
+
 @media (min-width: 1000px) {
   .animated-name {
     font-size: 155px;
-    /* Tamaño más grande para pantallas de ordenador */
   }
 }
 </style>

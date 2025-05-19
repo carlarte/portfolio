@@ -1,19 +1,22 @@
 <template>
   <div class="scroll-container" ref="scrollContainer">
     <div class="scroll-content">
-      <div
-        v-for="(item, index) in reversedTimeline"
-        :key="index"
-        class="scroll-section"
-        ref="sections"
-      >
+      <div class="social-icons">
+        <a href="https://drive.google.com/file/d/1kATpuWN-zgfjLM-qfJxqCyfXJ-dvGo3e/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <img src="@/assets/Hero/cv.png" alt="Currícullum">
+        </a>
+      </div>
+
+      <div v-for="(item, index) in reversedTimeline" :key="index" class="scroll-section" ref="sections">
         <p class="date">{{ item.date }}</p>
         <h2 v-if="item.centro" class="centro">
-          <a v-if="item.url" :href="item.url" class="centroLink" target="_blank" rel="noopener noreferrer">{{ item.centro }}</a>
+          <a v-if="item.url" :href="item.url" class="centroLink" target="_blank" rel="noopener noreferrer">{{
+            item.centro }}</a>
           <span v-else>{{ item.centro }}</span>
         </h2>
         <h2 v-else class="empresa">
-          <a v-if="item.url" :href="item.url" class="empresaLink" target="_blank" rel="noopener noreferrer">{{ item.empresa }}</a>
+          <a v-if="item.url" :href="item.url" class="empresaLink" target="_blank" rel="noopener noreferrer">{{
+            item.empresa }}</a>
           <span v-else>{{ item.empresa }}</span>
         </h2>
         <h2 class="description">{{ item.description }}</h2>
@@ -36,8 +39,8 @@ export default {
         { date: "2017 - 2022", empresa: "Hospital Municipal de Badalona (BSA)", url: "https://www.bsa.cat/", description: "5 años de experiencia como Auxiliar de Enfermería", skill: "Gestión eficaz del tiempo, asertividad, colaborar en equipo, gestión de las emociones, actitud proactiva" },
         { date: "2019 - 2021", centro: "Universitat de Barcelona (UB)", url: "https://www.ub.edu/portal/web/bellesarts", description: "(81 créditos) Grado de Bellas Artes" },
         { date: "Ene - Dic de 2023", centro: "Centre d'Estudis Politécnics (CEP)", url: "https://politecnics.barcelona/", description: "Actividades de gestión administrativa (SOC)" },
-        { date: "2023 - 2025", centro: "Centre d'Estudis Politécnics (CEP)", url: "https://politecnics.barcelona/", description: "Técnica en Desarrollo de Aplicaciones Web", skill: "Gestión de proyectos desde cero"},
-        { date: "Feb - Jun de 2025", empresa: "M-Automoción", url: "https://www.m-automocion.com/", description: "Prácticas como desarrolladora Web" , skill: "Configurar un servidor virgen, actualizar versiones de software, trabajar con entornos virtuales, creación de un whistleBlower y un acta de entrega con firma digital en móvil"}
+        { date: "2023 - 2025", centro: "Centre d'Estudis Politécnics (CEP)", url: "https://politecnics.barcelona/", description: "Técnica en Desarrollo de Aplicaciones Web", skill: "Gestión de proyectos desde cero" },
+        { date: "Feb - Jun de 2025", empresa: "M-Automoción", url: "https://www.m-automocion.com/", description: "Prácticas como desarrolladora Web", skill: "Configurar un servidor virgen, actualizar versiones de software, trabajar con entornos virtuales, creación de un whistleBlower y un acta de entrega con firma digital en móvil" }
       ]
     };
   },
@@ -73,6 +76,21 @@ export default {
 </script>
 
 <style scoped>
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+.social-icons img {
+  width: 50px; 
+  height: 50px;
+  object-fit: contain; 
+  transition: transform 0.3s ease; 
+}
+
+.social-icons img:hover {
+  transform: scale(1.6); 
+}
 .scroll-container {
   max-height: 685px;
   width: 100%;
@@ -99,7 +117,7 @@ export default {
   padding: 20px;
   background-color: #1e1e1e;
   border-radius: 10px;
-  
+
 }
 
 .scroll-section {
@@ -137,15 +155,18 @@ export default {
   font-size: 1rem;
   color: #ffffff;
 }
+
 .skill {
   font-style: italic;
   margin-top: 5px;
 }
+
 .centroLink {
   color: #38e6ec;
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .empresaLink {
   color: #FF5D5D;
   text-decoration: none;
