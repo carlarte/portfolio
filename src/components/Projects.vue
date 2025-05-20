@@ -57,7 +57,8 @@ export default {
           description: 'Juego de piezas deslizantes',
           tecnologia: 'HTML, CSS, JavaScript',
           repo: 'https://github.com/cep-daw/3x3-puzzle',
-          image: puzzleImg
+          image: puzzleImg,
+          link: 'https://puzzle.carlacayero.me/'
         },
         {
           name: 'GGGamers',
