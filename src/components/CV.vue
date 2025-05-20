@@ -34,13 +34,49 @@ export default {
   data() {
     return {
       timeline: [
-        { date: "2010 - 2012", centro: "INS Salvador Seguí", description: "Técnica en Curas Auxiliares de Enfermería" },
-        { date: "2013 - 2016", centro: "IES Eugeni d'Ors", description: "Técnica en Laboratorio de Diagnóstico Clínico" },
-        { date: "2017 - 2022", empresa: "Hospital Municipal de Badalona (BSA)", url: "https://www.bsa.cat/", description: "5 años de experiencia como Auxiliar de Enfermería", skill: "Gestión eficaz del tiempo, asertividad, colaborar en equipo, gestión de las emociones, actitud proactiva" },
-        { date: "2019 - 2021", centro: "Universitat de Barcelona (UB)", url: "https://www.ub.edu/portal/web/bellesarts", description: "(81 créditos) Grado de Bellas Artes" },
-        { date: "Ene - Dic de 2023", centro: "Centre d'Estudis Politécnics (CEP)", url: "https://politecnics.barcelona/", description: "Actividades de gestión administrativa (SOC)" },
-        { date: "2023 - 2025", centro: "Centre d'Estudis Politécnics (CEP)", url: "https://politecnics.barcelona/", description: "Técnica en Desarrollo de Aplicaciones Web", skill: "Gestión de proyectos desde cero" },
-        { date: "Feb - Jun de 2025", empresa: "M-Automoción", url: "https://www.m-automocion.com/", description: "Prácticas como desarrolladora Web", skill: "Configurar un servidor virgen, actualizar versiones de software, trabajar con entornos virtuales, creación de un whistleBlower y un acta de entrega con firma digital en móvil" }
+        { 
+          date: "2010 - 2012", 
+          centro: "INS Salvador Seguí", 
+          description: "Técnica en Curas Auxiliares de Enfermería" 
+        },
+        { 
+          date: "2013 - 2016", 
+          centro: "IES Eugeni d'Ors", 
+          description: "Técnica en Laboratorio de Diagnóstico Clínico" 
+        },
+        { 
+          date: "2017 - 2022", 
+          empresa: "Hospital Municipal de Badalona (BSA)", 
+          url: "https://www.bsa.cat/", 
+          description: "5 años de experiencia como Auxiliar de Enfermería", 
+          skill: "Gestión eficaz del tiempo, asertividad, colaborar en equipo, gestión de las emociones, actitud proactiva" 
+        },
+        { 
+          date: "2019 - 2021", 
+          centro: "Universitat de Barcelona (UB)", 
+          url: "https://www.ub.edu/portal/web/bellesarts", 
+          description: "(81 créditos) Grado de Bellas Artes" 
+        },
+        { 
+          date: "Ene - Dic de 2023", 
+          centro: "Centre d'Estudis Politécnics (CEP)", 
+          url: "https://politecnics.barcelona/", 
+          description: "Actividades de gestión administrativa (SOC)" 
+        },
+        { 
+          date: "2023 - 2025", 
+          centro: "Centre d'Estudis Politécnics (CEP)", 
+          url: "https://politecnics.barcelona/",
+          description: "Técnica en Desarrollo de Aplicaciones Web", 
+          skill: "Gestión de proyectos desde cero" 
+        },
+        { 
+          date: "Feb - Jun de 2025", 
+          empresa: "M-Automoción", 
+          url: "https://www.m-automocion.com/", 
+          description: "Prácticas como desarrolladora Web", 
+          skill: "Configurar un servidor desde cero, actualizar versiones de software, trabajar con entornos virtuales, creación de una página whistleBlower y un acta de entrega con firma digital en móvil" 
+        }
       ]
     };
   },
