@@ -55,8 +55,8 @@ export default {
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg'
         },
         {
-          name: 'Ubuntu / GNU Linux',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg'
+          name: 'VirtualBox',
+          icon: 'https://img.icons8.com/?size=100&id=38792&format=png&color=000000'
         },
         {
           name: 'OpenSUSE Tumbleweed',
