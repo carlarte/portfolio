@@ -170,20 +170,25 @@ export default {
   font-weight: bold;
 }
 
-.repo-link:hover {
-  text-decoration: underline;
+.repo-link:hover,
+.web-link:hover {
+  /* Cambia el subrayado por un efecto de fondo y color */
+  background: linear-gradient(90deg, #38e6ec 0%, #FF5D5D 100%);
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 8px;
+  box-shadow: 0 2px 10px rgba(56,230,236,0.2);
+  transform: translateY(-2px) scale(1.07) rotate(-2deg);
+  transition: all 0.2s;
+  text-decoration: none;
 }
+
 .web-link {
   display: inline-block;
   color: #38e6ec;
   text-decoration: none;
   font-weight: bold;
 }
-
-.web-link:hover {
-  text-decoration: underline;
-}
-
 .github {
   display: flex;
   justify-content: space-between;
