@@ -22,7 +22,7 @@
 import { animate, onScroll } from 'animejs';
 import role from '@/assets/projects/role.png';
 import puzzleImg from '@/assets/projects/puzzle.png';
-import chillgigImg from '@/assets/projects/chillgig.png';
+// import chillgigImg from '@/assets/projects/chillgig.png';
 import gggamersImg from '@/assets/projects/gggamers.png';
 export default {
   data() {
@@ -56,7 +56,7 @@ export default {
           description: 'Aplicación web que comunica músicos y locales para eventos en directo.',
           tecnologia: 'Vue.js y Laravel',
           repo: 'https://github.com/TheCheetahGirls-3/melodia-conectada',
-          image: chillgigImg
+          // image: chillgigImg
         }
       ]
     };
@@ -64,6 +64,7 @@ export default {
   methods: {
     selectProject(project) {
       this.$emit('update-background', project.image);
+      this.$emit('update-project-name', project.name);
     }
   },
   mounted() {

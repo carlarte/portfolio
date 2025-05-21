@@ -2,12 +2,12 @@
   <section class="about-container">
     <!-- Parte izquierda: Componente Menu -->
     <div class="about-left">
-      <Menu @update-background="background = $event" />
+      <Menu @update-background="background = $event" @update-project-name="selectedProjectName = $event"/>
     </div>
 
     <!-- Parte derecha: Imagen -->
     <div class="about-right">
-      <Image :image="background" />
+      <Image :image="background" :projectName="selectedProjectName"/>
     </div>
   </section>
 </template>
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       background: '',
+      selectedProjectName: '',
     };
   },
   components: { Image, Menu },
@@ -50,6 +51,7 @@ export default {
   background-color: #161616;
   min-width: 300px;
   min-height: 400px;
+  height: 100%;
 }
 
 body {

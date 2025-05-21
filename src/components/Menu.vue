@@ -8,7 +8,7 @@
     </div>
 
     <!-- Contenido dinámico -->
-    <component :is="currentComponent" @update-background="handleUpdateBackground" />
+    <component :is="currentComponent" @update-background="handleUpdateBackground" @update-project-name="handleUpdateProjectName"/>
   </div>
 </template>
 
@@ -50,7 +50,10 @@ export default {
     },
     handleUpdateBackground(image) {
     this.$emit('update-background', image);
-    }
+    },
+    handleUpdateProjectName(name) {
+    this.$emit('update-project-name', name);
+  }
   },
 };
 </script>
