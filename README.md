@@ -24,18 +24,6 @@ Además, me encanta la posibilidad de colaborar con otros en proyectos innovador
 
 ## 🌸 ¡Hablemos!
 
-Si tienes alguna pregunta o te gustaría colaborar en algún proyecto, no dudes en ponerte en contacto conmigo:
-
-- **LinkedIn**: [Carla Cayero](https://www.linkedin.com/in/carlacayerohernandez/)
-- **Correo electrónico**: [ccaarlaa@gmail.com](mailto:ccaarlaa@gemail.com)
-
-## 📈 Estadísticas
-
-¡Gracias por visitar mi portafolio! Si te gusta lo que ves, no dudes en darme una estrella o seguirme en GitHub.
-
-![GitHub Followers](https://img.shields.io/github/followers/carlarte?style=social)
-![GitHub Stars](https://img.shields.io/github/stars/carlarte/portfolio?style=social)
-
----
+Si tienes alguna pregunta o te gustaría colaborar en algún proyecto, no dudes en ponerte en contacto conmigo.
 
 **¡Gracias por tu visita!** 🌷
