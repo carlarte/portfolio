@@ -124,18 +124,34 @@ export default {
     gap: 10px;
   }
   .menu-buttons {
-    flex-direction: row;
-    gap: 10px;
+    flex-direction: column;
+    gap: 30px;
     position: static;
     min-width: unset;
     justify-content: center;
     width: 100%;
     margin-bottom: 10px;
   }
-  .menu-buttons button,
+    .menu-buttons.mini {
+    flex-direction: row;
+    gap: 15px;
+    position: static;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .menu-buttons button {
+    width: 100px;
+    height: 100px;
+    font-size: 13px;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+  }
+
   .menu-buttons.mini button {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     font-size: 10px;
     min-width: 0;
     min-height: 0;

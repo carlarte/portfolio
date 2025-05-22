@@ -1,5 +1,5 @@
 <template>
-  <section class="about-container">
+  <section class="about-container" id="about">
     <!-- Parte izquierda: Componente Menu -->
     <div class="about-left">
       <Menu @update-background="background = $event" @update-project-name="selectedProjectName = $event"/>

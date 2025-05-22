@@ -68,14 +68,14 @@ export default {
           centro: "Centre d'Estudis Politécnics (CEP)", 
           url: "https://politecnics.barcelona/",
           description: "Técnica en Desarrollo de Aplicaciones Web", 
-          skill: "Gestión de proyectos desde cero" 
+          skill: "Gestión de proyectos desde cero, despliegue con Docker y hosting, diseño UI con Figma, presentación de proyectos en el Centre Cívic d'Urgell, trabajo en equipo. " 
         },
         { 
           date: "Feb - Jun de 2025", 
           empresa: "M-Automoción", 
           url: "https://www.m-automocion.com/", 
           description: "Prácticas como desarrolladora Web", 
-          skill: "Configurar un servidor desde cero, actualizar versiones de software, trabajar con entornos virtuales, creación de una página whistleBlower y un acta de entrega con firma digital en móvil" 
+          skill: "Configurar un servidor desde cero, actualizar versiones de proyectos de Django, trabajar con entornos virtuales Virtual Fish, creación de una página whistleBlower y un acta de entrega con firma digital en móvil" 
         }
       ]
     };

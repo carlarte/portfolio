@@ -26,7 +26,11 @@
         <img src="@/assets/Hero/gmail.png" alt="Gmail" />
       </a>
     </div>
+    <div class="scroll" @click="scrollToAbout" style="cursor:pointer;">
+      <img src="@/assets/flecha.png" alt="" srcset="">
+    </div>
   </section>
+  
 
 </template>
 
@@ -60,7 +64,15 @@ export default {
       loop: true,
       loopDelay: 1000
     });
+  },
+  methods: {
+  scrollToAbout() {
+    const about = document.getElementById('about');
+    if (about) {
+      about.scrollIntoView({ behavior: 'smooth' });
+    }
   }
+}
 };
 </script>
 
@@ -72,6 +84,52 @@ export default {
   align-items: center;
   background: #161616;
   text-align: center;
+}
+.scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+
+.scroll img {
+  width: 32px;
+  height: auto;
+  animation: neon-bounce 1.5s infinite;
+  filter:
+    drop-shadow(0 0 0px #fff)
+    drop-shadow(0 0 8px #38fff9)
+    drop-shadow(0 0 24px #38fff9)
+    drop-shadow(0 0 48px #38fff9);
+  transition: transform 0.3s ease, filter 0.3s;
+}
+
+@keyframes neon-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter:
+      drop-shadow(0 0 0px #fff)
+      drop-shadow(0 0 8px #38fff9)
+      drop-shadow(0 0 24px #38fff9)
+      drop-shadow(0 0 48px #38fff9);
+  }
+  30% {
+    transform: translateY(-16px) scale(1.15);
+    filter:
+      drop-shadow(0 0 8px #fff)
+      drop-shadow(0 0 24px #38fff9)
+      drop-shadow(0 0 48px #38fff9)
+      drop-shadow(0 0 64px #38fff9);
+  }
+  60% {
+    transform: translateY(0) scale(1);
+    filter:
+      drop-shadow(0 0 0px #fff)
+      drop-shadow(0 0 8px #38fff9)
+      drop-shadow(0 0 24px #38fff9)
+      drop-shadow(0 0 48px #38fff9);
+  }
 }
 
 .animated-name {
