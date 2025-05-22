@@ -96,7 +96,7 @@ export default {
 .scroll img {
   width: 32px;
   height: auto;
-  animation: neon-bounce 1.5s infinite;
+  animation: neon-bounce 2.5s infinite;
   filter:
     drop-shadow(0 0 0px #fff)
     drop-shadow(0 0 8px #38fff9)
