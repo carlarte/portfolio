@@ -1,6 +1,7 @@
 # 🌸 Portfolio de Carla Cayero 🌸
 
-¡Bienvenido/a a mi portafolio digital! Soy Carla Cayero, una **desarrolladora** apasionada por el arte, el diseño digital y las experiencias de usuario. <br>
+¡Bienvenido/a a mi portafolio digital! <br>
+Soy Carla Cayero, una **desarrolladora** apasionada por el arte, el diseño digital y las experiencias de usuario. <br>
 En este repositorio podrás encontrar algunos de mis proyectos y trabajos que reflejan mi enfoque en el diseño de soluciones innovadoras y atractivas.
 
 ## 🚀 ¿Qué encontrarás en este portafolio?
